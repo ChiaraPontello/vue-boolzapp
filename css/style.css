@@ -1,0 +1,91 @@
+/*colori*/
+
+/*:root {
+    --color-white: #ffffff;
+    --color-dark-text: #161012;
+    --color-dark-grey: #6b7376;
+    --color-text-grey: #b6bbc1;
+    --color-headers: #eaeaea;
+    --color-contact-hover: #e9ebeb;
+    --color-light-icons: #b1b1b1;
+    --color-sent-message: #d5f9ba;
+    --color-notification: #8edafc;
+    --background-cp: linear-gradient(180deg, #009688 24.99%, #DCDBD3 25%);
+}*/
+
+:root {
+	--color-white: #ffffff;
+	--color-dark-text: #161012;
+	--color-dark-grey: #6b7376;
+	--color-text-grey: #b6bbc1;
+	--color-headers: #eaeaea;
+	--color-contact-hover: #e9ebeb;
+	--color-light-icons: #b1b1b1;
+	--color-sent-message: #d5f9ba;
+	--color-notification: #8edafc;
+    --background-cp: linear-gradient(180deg, rgb(2, 2, 2) 24.99%, #a8a7a2 25%);
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+#app {
+    width: 100%;
+    height: 100vh;
+    background: var(--background-cp);
+    padding: 20px;
+}
+
+.contacts{
+    background-color: var(--color-white);
+}
+
+.header{
+    background-color: var(--color-headers)
+}
+
+.h0{
+    height: 0;
+}
+
+.icons{
+    color: var(--color-light-icons);
+}
+
+
+.notification{
+    background-color: var(--color-notification);
+}
+.text-notification{
+    color: var(--color-notification);
+}
+.campana{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+}
+.avatar{
+    width: 30%;
+}
+
+.avatarDu {
+    width: 20%;
+}
+
+.sent{
+    background-color: var(--color-sent-message);
+}
+.received{
+    background-color: var(--color-white);
+}
+
+.chat{
+    background-image: url(../img/mine.jpg);
+}
+
+.contact:hover {
+    background-color: var(--color-contact-hover);
+}
