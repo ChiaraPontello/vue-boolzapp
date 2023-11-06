@@ -11,7 +11,7 @@ createApp({
         loadList: [],
         showChat: [], /*riguardare*/
         messageIndex: null,
-    
+        spunteBlu: [],
 
         contacts: [
             {
@@ -242,7 +242,7 @@ createApp({
 
         this.newMsg = '',
         
-        
+       
         
 
         setTimeout(()=>{
@@ -331,7 +331,7 @@ createApp({
 }).mount('#app')
 
 /*
--spunte blu
+
 
 -nuovapagina
 */

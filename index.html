@@ -21,7 +21,7 @@
               </div>
               <div class="right">
                 <i class="fa-solid fa-circle-notch"></i>
-                <i class="fa-solid fa-message"></i>
+                <i class="fa-solid fa-message"></i> 
                 <i class="fa-solid fa-ellipsis-vertical"></i>
               </div>
             </div>
@@ -76,7 +76,11 @@
                 <i class="fa-solid fa-arrow-left me-3" @click="showChat = false"></i> <!--riguardare-->
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <i class="fa-solid fa-paperclip"></i>
-                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <!---->
+                <i class="fa-solid fa-ellipsis-vertical" style="cursor:pointer" @click="openOption(index)"></i>
+                <ul class="dropdown-menu" :class="{'show': messageIndex === index}">
+                  <li><a class="dropdown-item" @click.prevent="deleteMsg(index)">Elimina</a></li>
+                </ul>
               </div>
             </div>
             <div class="avatarChat d-flex align-items-center ">
