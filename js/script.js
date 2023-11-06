@@ -10,7 +10,7 @@ createApp({
         loadChat: false, 
         loadList: [],
         showChat: [], /*riguardare*/
-
+        messageIndex: null,
     
 
         contacts: [
@@ -310,8 +310,17 @@ createApp({
         
       },
 
-      
-
+     openOption(i){
+        if(this.messageIndex !==i){
+            this.messageIndex = i;
+        }else {
+            this.messageIndex = null;
+        }
+     },
+     deleteMsg(index){
+        this.activeIndex.messages.splice(index,1);
+        this.messageIndex = null;
+     }
     
       
     },

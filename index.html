@@ -86,14 +86,11 @@
                   :class=" message.status === 'sent' ? 'mine' : 'not-mine'">{{message.message}}
                   <span class="msg-time little-text me-2 ">{{TimeDate(message.date)}}</span>
                   <!--dropdown-->
-                  <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><button class="dropdown-item" type="button">Action</button></li>
-                      <li><button class="dropdown-item" type="button">Another action</button></li>
-                      <li><button class="dropdown-item" type="button">Something else here</button></li>
+                  <div class="dropdown ms-2">
+                    <i class="fa-solid fa-caret-down" style="cursor:pointer" @click="openOption(index)"></i>
+                    <ul class="dropdown-menu" :class="{'show': messageIndex === index}">
+                      <li><a class="dropdown-item">Info</a></li>
+                      <li><a class="dropdown-item" @click.prevent="deleteMsg(index)">Elimina</a></li>
                     </ul>
                   </div>
                 <!--stop dropdown-->
