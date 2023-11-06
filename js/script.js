@@ -238,7 +238,9 @@ createApp({
           status: 'sent'
         })
 
-        this.newMsg = ''
+        this.newMsg = '',
+        
+        
         
 
         setTimeout(()=>{
@@ -307,11 +309,10 @@ createApp({
 
       
     },
+   
 
 
-  computed(){
-
-  }
+  
 }).mount('#app')
 
 /*
