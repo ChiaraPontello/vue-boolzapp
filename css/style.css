@@ -33,7 +33,6 @@ body{
     height: 90vh;
     width: 80%;
     margin: 0 auto;
-    margin-top: 30px;
     background-color: white;
 }
   
@@ -157,7 +156,6 @@ body{
   .chat .message{
     width: 50%;
     border-radius: 10px;
-    margin-top: 20px;
     margin-bottom: 10px;
     padding: 10px;
     position: relative;
@@ -179,11 +177,16 @@ body{
   .message .msg-time{
     position: absolute;
     right: 10px;
-    bottom: 10px;
+    top: 10px;
     font-size: 0.8rem;
   }
   
-  
+  .spunteBlu i {
+    color: #5195F3;
+    font-size: 0.8rem;
+    float: right;
+    margin-top: 30px;
+}
   
 
 

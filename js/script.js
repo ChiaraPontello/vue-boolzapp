@@ -332,6 +332,6 @@ createApp({
 
 /*
 -spunte blu
--dropdown
+
 -nuovapagina
 */
