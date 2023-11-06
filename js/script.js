@@ -318,7 +318,7 @@ createApp({
         }
      },
      deleteMsg(index){
-        this.activeIndex.messages.splice(index,1);
+        this.contacts[this.activeIndex].messages.splice(index,1)
         this.messageIndex = null;
      }
     
