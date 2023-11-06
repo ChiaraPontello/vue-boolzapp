@@ -13,77 +13,42 @@
 </head>
 <body>
     <div class="containerWa d-flex" id="app">
-        
-          <div>
-            
+          <div class="d-md-block" :class="{'d-none': showChat}"> <!--riguardare-->
             <div class="sidebarChat d-flex justify-content-between align-items-center  ">
-    
               <div class="left">
                 <img src="img/avatar_io.jpg" alt="io">  
                 <span>Chiara</span>
               </div>
-    
               <div class="right">
                 <i class="fa-solid fa-circle-notch"></i>
                 <i class="fa-solid fa-message"></i>
                 <i class="fa-solid fa-ellipsis-vertical"></i>
-    
               </div>
-            
-    
             </div>
-           
             <div class="notification d-flex align-items-center ">
-    
               <i class="fa-solid fa-bell-slash campanella"></i>
-    
               <div>
                 <span>Ricevi notifiche di nuovi messaggi</span> <br>
                 <span class=" little-text ">Attiva notifiche desktop</span>
               </div>
             </div>
-            
-    
-           
             <div class="searchbar">
-              
               <div class="ricerca d-flex align-items-center ">
                 <a href="#" ><i class="fa-solid fa-magnifying-glass ms-2 lens"></i></a>
-    
-                
                 <input v-model="newText" type="search" placeholder="Cerca o inizia una nuova chat" class="border-0 w-100 mx-2">
-              
-              
-              
               </div>
-              
             </div>
-            
-    
-            
-    
             <div class="avatarContact d-flex ">
-    
-              
-              
               <div class="avatarList w-100 h-100 d-flex flex-column ">
-    
-    
-    
                 <div v-for="(contact, index) in contacts" >
-    
-                  
                   <div
                   v-if="contacts[index].name.toLowerCase().includes(newText.toLowerCase())"
                   @click = "activeIndex = index, newText = ''"
                   class="contact d-flex">
-      
                     <img :src="contact.avatar" alt="">
-      
                     <div>
                       <span>{{contact.name}}</span>
                       <br>
-                      
                       <span v-if="loadList.includes(index)">
                         Sta scrivendo...
                       </span>
@@ -91,122 +56,51 @@
                       v-else
                       class="little-text">{{addMessage(index)}}</span>
                     </div>
-      
                     <div class="ms-auto pe-1  little-text">{{postDate(index)}}</div>
-                    
                   </div>
-    
-                </div>            
-                
-    
+                </div>
               </div>
-    
-              
-    
             </div>
-    
           </div>
-
-        
-    
-    
-    
-    
-    
-       
-    
-          <div class="chat">
-    
-           
-            <div class="sidebarChat bg-lgrey d-flex justify-content-between align-items-center ">
-    
+          <div class="chat d-md-block" :class="{'d-none': !showChat}"> <!--riguardare-->
+            <div class="sidebarChat  d-flex justify-content-between align-items-center ">
               <div class="left d-flex">
-                <img class="me-3" :src="contacts[activeIndex].avatar" alt=""> 
-    
+                <img class="me-3" :src="contacts[activeIndex].avatar" alt="">
                 <div >
                   <span>{{contacts[activeIndex].name}}</span>
                   <br>
                   <span class="little-text">ultimo accesso oggi alle {{postDate(activeIndex)}}</span>
                 </div> 
               </div>
-    
               <div class="right">
+                <i class="fa-solid fa-arrow-left me-3" @click="showChat = false"></i> <!--riguardare-->
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <i class="fa-solid fa-paperclip"></i>
                 <i class="fa-solid fa-ellipsis-vertical"></i>
-    
               </div>
             </div>
-            
-    
-            
             <div class="avatarChat d-flex align-items-center ">
-    
-    
-    
               <div class="container">
-    
-              
                 <div v-for="(message,index) in contacts[activeIndex].messages">
                   <div class="message"
                   :class=" message.status === 'sent' ? 'mine' : 'not-mine'">{{message.message}}
-                
                   <span class="msg-time little-text me-2 ">{{TimeDate(message.date)}}</span>
-                  
-                  
-    
                   </div>
                 </div>
-    
                 <div
                  v-if="loadList.includes(activeIndex)"
-                 class=" message loading-points not-mine">
+                 class=" message not-mine">
                   Sta scrivendo...
                 </div>
-                
-              
-    
               </div>
-              
-    
-    
-           
             </div>
-    
-           
-    
-            
             <div class="answers d-flex justify-content-around align-items-center ">
-    
               <i class="fa-regular fa-face-smile"></i>
-    
               <input v-model="newMsg" @keyup.enter="pushNewMessage(activeIndex)" class="form-control form-control-lg w-75" type="text" placeholder="Scrivi un messaggio">
-    
               <i class="fa-solid fa-microphone"></i>
             </div>
-    
-            
-           
-    
           </div>
-        
-        
       </div>
-          
-                
-
-               
-       
-
-
-   
-
-
-
-
-
-
-
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/script.js"></script>

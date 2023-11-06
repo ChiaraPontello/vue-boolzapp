@@ -9,7 +9,7 @@ createApp({
         newText: '',
         loadChat: false, 
         loadList: [],
-    
+        showChat: [], /*riguardare*/
 
     
 
@@ -270,6 +270,7 @@ createApp({
         contact.visible = true
         console.log(contact.visible);
         
+        this.showChat = true; /*riguardare*/
       },
 
        TimeDate(date){
