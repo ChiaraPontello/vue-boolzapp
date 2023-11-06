@@ -37,7 +37,7 @@ body{
     background-color: white;
 }
   
-  /* SEZIONE SINISTRAAAAAA */
+  
   
 
   
@@ -79,9 +79,6 @@ body{
     color:#818181 ;
   }
   
-  /* ------------------------------------------ */
-  
-  /* SEARCHBAR */
   
   .searchbar{
     background-color: #eaeaea;
@@ -106,7 +103,7 @@ body{
   }
   
  
-  /* ----- */
+
   
   
   .avatarContact{
@@ -136,10 +133,9 @@ body{
     margin-right: 10px;
   }
   
-  /* ///SEZIONE SINISTRA------------- */
+ 
   
   
-  /* SEZIONE DESTRAAA ----------------*/
   .chat{
     height: 100%;
     width: 70%;
@@ -187,7 +183,10 @@ body{
     font-size: 0.8rem;
   }
   
-  
+  /* DROPDOWN*/
+
+
+
   
   
  

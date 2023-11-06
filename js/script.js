@@ -229,6 +229,8 @@ createApp({
 
       
 
+      
+
       pushNewMessage(index){
 
         
@@ -250,7 +252,7 @@ createApp({
         },1000);
 
         
-        /*bug*/
+        
         setTimeout(()=>{
           this.contacts[index].messages.push( {
             date: this.addDate(),
@@ -258,7 +260,8 @@ createApp({
             status: 'received',
           })
           
-          this.loadChat = false
+          this.loadChat = false,
+          this.loadList.pop()
           
         },2000)
       },
@@ -305,8 +308,11 @@ createApp({
       random(max){
             return Math.floor(Math.random() * max);
         
-      }
+      },
 
+      
+
+    
       
     },
    
