@@ -1,6 +1,6 @@
 /*colori*/
 
-/*:root {
+:root {
     --color-white: #ffffff;
     --color-dark-text: #161012;
     --color-dark-grey: #6b7376;
@@ -10,82 +10,190 @@
     --color-light-icons: #b1b1b1;
     --color-sent-message: #d5f9ba;
     --color-notification: #8edafc;
-    --background-cp: linear-gradient(180deg, #009688 24.99%, #DCDBD3 25%);
-}*/
-
-:root {
-	--color-white: #ffffff;
-	--color-dark-text: #161012;
-	--color-dark-grey: #6b7376;
-	--color-text-grey: #b6bbc1;
-	--color-headers: #eaeaea;
-	--color-contact-hover: #e9ebeb;
-	--color-light-icons: #b1b1b1;
-	--color-sent-message: #d5f9ba;
-	--color-notification: #8edafc;
-    --background-cp: linear-gradient(180deg, rgb(2, 2, 2) 24.99%, #a8a7a2 25%);
+    --background-cp: linear-gradient(180deg, rgb(7, 7, 7) 24.99%, #6d6c67 25%);
 }
 
 body{
     font-family: 'Lato', sans-serif;
-}
-#app {
-    width: 100%;
-    height: 100vh;
     background: var(--background-cp);
-    padding: 20px;
-}
+    height: 100vh;
+    width: 100%;
+     
+  }
 
-.contacts{
-    background-color: var(--color-white);
-}
-
-.header{
-    background-color: var(--color-headers)
-}
-
-.h0{
-    height: 0;
-}
-
-.icons{
-    color: var(--color-light-icons);
-}
-
-
-.notification{
-    background-color: var(--color-notification);
-}
-.text-notification{
-    color: var(--color-notification);
-}
-.campana{
+  
+  img{
     width: 50px;
     height: 50px;
-    line-height: 50px;
-    font-size: 30px;
     border-radius: 50%;
-    background-color: var(--color-white);
+    
+  }
+  
+  .containerWa{
+    height: 90vh;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: white;
 }
-.avatar{
-    width: 30%;
-}
+  
+  /* SEZIONE SINISTRAAAAAA */
+  
 
-.avatarDu {
-    width: 20%;
-}
+  
 
-.sent{
-    background-color: var(--color-sent-message);
-}
-.received{
-    background-color: var(--color-white);
-}
+  
+  .sidebarChat{
+    border: 1px solid var(--color-light-icons);
+    height: 70px;
+  }
+  
+   i{
+    font-size: 1.2rem;
+    padding: 0 10px;
+    color:var(--color-light-icons);
+    cursor: pointer;
+  }
+  
+  .notification {
+    background-color: #8edafc ;
+    height: 60px;
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .campanella {
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 50%;
+    color: var(--color-notification);
+  }
+  
 
-.chat{
-    background-image: url(../img/mine.jpg);
+  
+  .little-text{
+    font-size: 0.8rem;
+    color:#818181 ;
+  }
+  
+  /* ------------------------------------------ */
+  
+  /* SEARCHBAR */
+  
+  .searchbar{
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+  }
+  
+  
+  .ricerca {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    font-size: 0.9rem;
+  }
+  
+  .lens {
+    width: 40px;
+    
+    color:var(--color-light-icons);
+  }
+  
+ 
+  /* ----- */
+  
+  
+  .avatarContact{
+    height: calc(100% - 180px);
+    position: relative;
 }
-
-.contact:hover {
+  
+  
+  
+  .avatarContact .avatarList{ 
+    overflow-y: scroll;
+}
+  
+   .contact{
+    border-top: 1px solid #b1b1b1 ;
+    padding: 10px;
+    cursor: pointer;
+    
+  }
+  
+  .contact:hover{
     background-color: var(--color-contact-hover);
+   }
+
+  
+  .contact img {
+    margin-right: 10px;
+  }
+  
+  /* ///SEZIONE SINISTRA------------- */
+  
+  
+  /* SEZIONE DESTRAAA ----------------*/
+  .chat{
+    height: 100%;
+    width: 70%;
 }
+
+  .chat .answers{
+    height: 65px;
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.182);
+  }
+  
+  .chat .avatarChat{
+    width: 100%;
+    height:calc(100% - 130px);
+    background-image: url(/img/mine.jpg);
+    overflow-y: scroll;
+  }
+  
+  .chat .message{
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    position: relative;
+  }
+  
+  
+  .message.mine{
+    float: right;
+    margin-left: calc(100% - 310px);
+    background-color: #d5f9ba;
+    
+  }
+  
+  .message.not-mine{
+    float: left;
+    background-color: white;
+  }
+  
+  .message .msg-time{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 0.8rem;
+  }
+  
+  
+  
+  
+ 
+  
+  
+  
+  
+  
+ 
